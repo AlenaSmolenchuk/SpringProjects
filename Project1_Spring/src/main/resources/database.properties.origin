@@ -1,0 +1,21 @@
+driver =
+url =
+user =
+password =
+
+
+
+tables
+
+create table person (
+    person_id integer AUTO_INCREMENT PRIMARY KEY,
+    fio varchar(124) UNIQUE
+);
+
+create table book (
+    book_id integer AUTO_INCREMENT PRIMARY KEY,
+    person_id integer NOT NULL REFERENCES person(person_id),
+    name varchar(124),
+    author varchar(124),
+    year integer
+);
