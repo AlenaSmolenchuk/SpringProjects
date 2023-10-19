@@ -10,7 +10,8 @@ create table book (
                       person_id integer REFERENCES person(id) ON DELETE SET NULL,
                       title varchar(100) NOT NULL ,
                       author varchar(100) NOT NULL ,
-                      year integer NOT NULL
+                      year integer NOT NULL,
+                      time_taken timestamp NOT NULL
 );
 
 -- PostgreeSQL
@@ -25,5 +26,6 @@ CREATE TABLE book (
                       person_id int REFERENCES person(id) ON DELETE SET NULL,
                       title varchar(100) NOT NULL,
                       author varchar(100) NOT NULL,
-                      year int NOT NULL
+                      year int NOT NULL,
+                      time_taken timestamp NOT NULL
 );
