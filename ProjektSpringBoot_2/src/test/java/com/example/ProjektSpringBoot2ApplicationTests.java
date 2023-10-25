@@ -9,5 +9,4 @@ class ProjektSpringBoot2ApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
