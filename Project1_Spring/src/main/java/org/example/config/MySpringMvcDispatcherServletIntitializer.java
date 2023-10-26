@@ -11,6 +11,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import java.util.EnumSet;
 
 public class MySpringMvcDispatcherServletIntitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+    
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return null;
