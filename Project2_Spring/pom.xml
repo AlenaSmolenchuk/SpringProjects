@@ -11,7 +11,8 @@
     <maven.compiler.target>20</maven.compiler.target>
 
     <spring-version>6.0.12</spring-version>
-  </properties>
+  
+	</properties>
 
   <version>1.0-SNAPSHOT</version>
   <name>Project2_Spring Maven Webapp</name>
