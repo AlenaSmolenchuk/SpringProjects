@@ -48,11 +48,6 @@ public class ServicesConfig {
         UserService userService = new UserService(userRepository);
         userRepository.save(
                 new User(UUID.randomUUID(),
-                        "super user",
-                        "2000-12-12",
-                        UUID.randomUUID()));
-        userRepository.save(
-                new User(UUID.randomUUID(),
                         "Alena",
                         "2004-07-29",
                         UUID.randomUUID()));
@@ -65,6 +60,11 @@ public class ServicesConfig {
                 new User(UUID.randomUUID(),
                         "Tanya",
                         "1999-01-05",
+                        UUID.randomUUID()));
+        userRepository.save(
+                new User(UUID.randomUUID(),
+                        "super user",
+                        "2000-12-12",
                         UUID.randomUUID()));
         return userService;
 
