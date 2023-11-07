@@ -10,7 +10,6 @@ import java.util.UUID;
 /**
  * Service to control issurances.
  */
-@Service
 public class IssuranceService {
     private final IssuranceRepository issuranceRepository;
 
