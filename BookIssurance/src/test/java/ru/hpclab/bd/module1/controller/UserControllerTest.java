@@ -10,7 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
-import ru.hpclab.bd.module1.Module1Application;
 import ru.hpclab.bd.module1.model.User;
 import ru.hpclab.bd.module1.repository.UserRepository;
 import java.util.UUID;
@@ -21,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = Module1Application.class)
+@SpringBootTest(properties = "spring.main.allow-bean-definition-overriding=true")
 @AutoConfigureMockMvc
 public final class UserControllerTest {
     private final ObjectMapper objectMapper = new ObjectMapper();
