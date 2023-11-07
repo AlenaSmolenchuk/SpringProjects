@@ -10,7 +10,6 @@ import java.util.UUID;
 /**
  * Service to control users.
  */
-@Service
 public class UserService {
 
     private final UserRepository userRepository;
