@@ -11,6 +11,7 @@ import java.util.UUID;
  * Service to control books.
  */
 public class BookService {
+    
     private final BookRepository bookRepository;
 
     /**
