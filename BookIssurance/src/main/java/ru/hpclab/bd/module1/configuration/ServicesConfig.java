@@ -93,7 +93,7 @@ public class ServicesConfig {
         return bookService;
 
     }
-
+ 
     /**
      * Builds and inits new issurance service.
      * @param issuranceRepository issurance repository
