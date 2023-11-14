@@ -47,4 +47,4 @@ public final class UserControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().json(expectedJson));
     }
-}
+} 
