@@ -15,6 +15,7 @@ import ru.hpclab.bd.module1.repository.UserRepository;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
@@ -30,15 +31,13 @@ public class UserServiceTest {
     @Autowired
     private UserRepository userRepository;
 
-    private static final Long SIMPLE_NUMBER = 4L;
-
     @Test
     public void testCreateAndGet() {
         //create
-        UserEntity userEntity = new UserEntity(SIMPLE_NUMBER,
+        UserEntity userEntity = new UserEntity(
                 "name",
-                "29-07-2004",
-                SIMPLE_NUMBER,
+                "29072004",
+                UUID.randomUUID(),
                 new ArrayList<>());
 
         UserEntity savedUser = userService.saveUser(userEntity);
@@ -61,21 +60,21 @@ public class UserServiceTest {
         @Bean
         UserRepository userRepository() {
             UserRepository userRepository = mock(UserRepository.class);
-            when(userRepository.save(any())).thenReturn(new UserEntity(SIMPLE_NUMBER,
+            when(userRepository.save(any())).thenReturn(new UserEntity(
                     "name",
-                    "29-07-2004",
-                    SIMPLE_NUMBER,
+                    "29072004",
+                    UUID.randomUUID(),
                     new ArrayList<>()));
             when(userRepository.findAll())
-                    .thenReturn(Arrays.asList(new UserEntity(SIMPLE_NUMBER,
+                    .thenReturn(Arrays.asList(new UserEntity(
                             "name1",
-                            "29-07-2004",
-                                    SIMPLE_NUMBER,
+                                    "29072004",
+                                    UUID.randomUUID(),
                             new ArrayList<>()),
-                            new UserEntity(SIMPLE_NUMBER,
+                            new UserEntity(
                                     "name2",
-                                    "29-07-2004",
-                                    SIMPLE_NUMBER,
+                                    "29072004",
+                                    UUID.randomUUID(),
                                     new ArrayList<>())));
             return userRepository;
         }
