@@ -1,6 +1,6 @@
 package ru.hpclab.bd.module1.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.*; 
 
 import java.util.ArrayList;
 import java.util.List;
